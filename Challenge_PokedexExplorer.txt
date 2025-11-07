@@ -1,0 +1,57 @@
+Étape 0 – Organization 🗂️
+Crée un nouveau dépôt GitHub nommé J10.
+Clone ce dépôt sur ton ordinateur avec la commande :
+git clone [URL_DU_DEPOT]
+Dans ce dossier J10/, crée un dossier 01_pokedex/.
+Dans ce dossier 01_pokedex/, place le fichier script.js téléchargé.
+Ajoute également le fichier pokedex.json téléchargé depuis le lien ci-dessus (dans le même dossier).
+Étape 1 – Charger le Pokédex ⚡
+Ouvre le fichier script.js dans VS Code.
+Observe la portion de code déjà présente : elle lit le fichier pokedex.json grâce à fs.readFileSync() et le convertit en objet JavaScript.
+Vérifie dans la console que tu obtiens bien le nombre total de Pokémon et le premier élément du Pokédex.
+console.log(pokedex.pokemon[0]);
+// Résultat attendu : un objet représentant Bulbasaur
+Étape 2 – Analyse de base 🔍
+Complète la fonction countPokemon() → retourne le nombre total de Pokémon.
+Complète heavyPokemon() → retourne les Pokémon pesant plus de 10 kg.
+Complète sortByWeight() → trie les Pokémon par poids (croissant).
+countPokemon(); 
+// Résultat attendu : 151
+
+heavyPokemon();
+// Résultat attendu : tableau des Pokémon de plus de 10 kg
+
+sortByWeight();
+// Résultat attendu : tableau trié du plus léger au plus lourd
+Étape 3 – Évolutions 🌱
+Complète getEvolutions(name) → retourne la liste des évolutions d’un Pokémon donné.
+Si le Pokémon n’a pas d’évolution, retourne un tableau vide.
+getEvolutions("Bulbasaur");
+// Résultat attendu : ["Ivysaur", "Venusaur"]
+
+getEvolutions("Pikachu");
+// Résultat attendu : ["Raichu"]
+Étape 4 – Mini Pokédex interactif 🧠
+Complète searchPokemon(name) → retourne un objet contenant les informations utiles d’un Pokémon (nom, type, taille, poids, évolutions, faiblesses, etc.).
+Si le Pokémon n’existe pas, retourne null.
+Affiche les résultats proprement dans la console (avec sauts de ligne et séparateurs).
+searchPokemon("Charmander");
+/* Résultat attendu :
+Nom : Charmander
+Type : Fire
+Taille : 0.6 m
+Poids : 8.5 kg
+Évolutions : Charmeleon → Charizard
+Faiblesses : Water, Ground, Rock
+*/
+Étape finale – Versionner ton travail 🧩
+Une fois ton code testé et fonctionnel :
+
+Ouvre ton terminal dans le dossier du projet.
+Ajoute les modifications :
+git add .
+Crée un commit :
+git commit -m "Exercice 01 – Pokedex Explorer terminé"
+Envoie ton travail sur GitHub :
+git push origin main
+✅ Objectif : ton dépôt GitHub doit contenir le dossier J10/01_pokedex/ avec ton fichier script.js et ton fichier pokedex.json bien versionnés.
