@@ -38,7 +38,7 @@ console.log("Premier Pokémon :", pokedex.pokemon[0].name);
 // ✨ Étape 2 : Analyse de base 🔍 - Fonctions de base à compléter
 // ---------------------------------------------------------------
 
-/* Retourne le nombre total de Pokémon dans le Pokédex */
+/* cette function sert à trouver le nombre total de Pokémon dans le Pokédex */
 function countPokemon() {
   // TODO : compter les Pokémon à partir de pokedex.pokemon//je compte les pokemon en number.
   console.log(pokedex.pokemon.length)
@@ -73,6 +73,7 @@ function sortByWeight() {
  }
 }
 sortByWeight()  
+
 /*cette function sert à recuperer les pokemon par poid en orde croissant*/
 function pokemonunivers(){
 let allpokemon = []/* out les pokemon en ordre croissant */
@@ -98,7 +99,7 @@ function getEvolutions(name) {
   let evolution = []/* tableau vide pour tous les attraper*/
 for (let i = 0; i < pokedex.pokemon.length; i++) { //on va cherhcer dans le fichier de pokedex et dans le grp pokemon
 if (pokedex.pokemon[i].name === name && pokedex.pokemon[i].next_evolution){ //Si. name est strictement egale au nom du pokemon et a son evolution 
-for (let j = 0; j < pokedex.pokemon[i].next_evolution.length; j++) { //alorson va chercher le NOME de levolution (J) dans le groupe de l'evoltion
+for (let j = 0; j < pokedex.pokemon[i].next_evolution.length; j++) { //alorson va chercher le NOM de levolution (J) dans le groupe de l'evoltion
 evolution.push(pokedex.pokemon[i].next_evolution[j].name);//puis on pousse le nom et le nom de l'evolution
 }}}
 if (evolution.length > 0) {
@@ -117,14 +118,14 @@ getEvolutions("Pikachu")
  */
 function searchPokemon(name) {
  
-for (let i = 0; i < pokedex.pokemon.length; i++) { //on va cherhcer dans le tableau de pokedex et dans le grp du en question pokemon ( i indice de chaque pokemon)
-if (pokedex.pokemon[i].name === name) {//si le pokemon porte le nom entre() de la function, si juste le code est executé.
+for (let i = 0; i < pokedex.pokemon.length; i++) { //on va cherhcer dans le tableau de pokedex et dans le grp  en question pokemon ( i indice de chaque pokemon)
+if (pokedex.pokemon[i].name === name) {//si le pokemon porte le nom entre() de la function, si juste le code est executé, j'espere.
 console.log("Nom : " + pokedex.pokemon[i].name);//son nom s'affiche
 //type
 let types = []; //tableau vide
-      if (pokedex.pokemon[i].type) {//si il existe type, on parcourt tout ses types avec une boucle.puis ils sont ajoutes
-        for (let k = 0; k < pokedex.pokemon[i].type.length; k++) {//n parcourt tout ses types avec une boucle.
-          types.push(pokedex.pokemon[i].type[k]);//puis ils sont ajoutes au tableau type
+      if (pokedex.pokemon[i].type) {//si "type" existe alors on parcourt tout ses types avec une boucle.puis ils sont ajoutés
+        for (let k = 0; k < pokedex.pokemon[i].type.length; k++) {//on parcourt tout ses types avec une boucle.
+          types.push(pokedex.pokemon[i].type[k]);//puis ils s' ajoutent au tableau type
 }
 }
 let typesText = "inconnu";
@@ -155,7 +156,7 @@ if (evolutions.length > 0) {
   for (let j = 0; j < evolutions.length; j++) {
     evolutionsText += evolutions[j];
     if (j < evolutions.length - 1) {
-      evolutionsText += " → "; // ajoute la flèche entre les évolutions
+      evolutionsText += " → "; // la flèche entre les évolutions
     }
   }
 }
@@ -174,7 +175,7 @@ if (faiblesses.length > 0) {
   for (let l = 0; l < faiblesses.length; l++) {
     faiblessesText += faiblesses[l];
     if (l < faiblesses.length - 1) {
-      faiblessesText += ", "; // ajoute une virgule entre les faiblesses
+      faiblessesText += ", "; //  une virgule entre les faiblesses
     }
   }
 }
